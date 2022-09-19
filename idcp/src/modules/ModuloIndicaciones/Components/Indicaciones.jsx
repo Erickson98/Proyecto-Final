@@ -1,6 +1,6 @@
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
-import { TextField, TextareaAutosize, Typography } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 
 function Indicaciones() {
   return (

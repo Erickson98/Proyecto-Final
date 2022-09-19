@@ -7,7 +7,7 @@ import {
 function Login() {
   return (
     <Plantilla title="Iniciar sesión">
-      <div>
+      <div class="mt-28">
         <GoogleLoginButton />
       </div>
 

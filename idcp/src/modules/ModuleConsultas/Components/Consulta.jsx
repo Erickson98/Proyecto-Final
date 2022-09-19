@@ -1,13 +1,13 @@
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
-import Button from "@material-ui/core/Button";
+import { Button, Typography } from "@material-ui/core";
 function Consulta() {
   return (
     <Plantilla title="Consultas">
-      <div class="flex flex-row mt-10">
-        <Button variant="outlined">Consulta Pública</Button>
-        <div>
-          <p class="mx-6 mt-1 text-xl">O</p>
+      <div class="flex flex-row mt-32 h-12">
+        <Button variant="outlined"> Consulta Pública</Button>
+        <div class="mx-10">
+          <p class="mx-6 mt-2 text-xl">O</p>
         </div>
         <Button variant="outlined">Consulta Privada</Button>
       </div>

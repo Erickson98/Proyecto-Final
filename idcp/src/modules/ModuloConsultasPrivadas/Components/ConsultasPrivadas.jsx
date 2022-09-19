@@ -1,7 +1,7 @@
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
 import Button from "@material-ui/core/Button";
-import { TextField } from "@material-ui/core";
+import { TextField, Typography } from "@material-ui/core";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import personEntity, {
   personSchema,
@@ -20,7 +20,7 @@ function ConsultaPrivadas() {
         }}
       >
         {() => (
-          <Form class=" w-96">
+          <Form class="mt-10 w-96">
             <Field
               fullWidth
               type="text"
@@ -64,17 +64,15 @@ function ConsultaPrivadas() {
             <div className="errorMessage">
               <ErrorMessage name="Address" />
             </div>
-            <div class="my-4">
-              <div className="btnSubmitContainer">
-                <Button
-                  fullWidth
-                  variant="contained"
-                  size="large"
-                  color="primary"
-                >
-                  Enviar
-                </Button>
-              </div>
+            <div class="my-5  ">
+              <Button
+                fullWidth
+                variant="contained"
+                size="large"
+                color="primary"
+              >
+                <Typography class="text-lg p-1.5">Enviar</Typography>
+              </Button>
             </div>
           </Form>
         )}

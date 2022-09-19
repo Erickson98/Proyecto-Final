@@ -2,7 +2,7 @@ import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
 import { TextField, Button } from "@material-ui/core";
 
-function Farmacia() {
+function Usuario() {
   return (
     <Plantilla title="Login">
       <div class="w-1/2 mt-20 my-5">
@@ -30,4 +30,4 @@ function Farmacia() {
   );
 }
 
-export default Farmacia;
+export default Usuario;

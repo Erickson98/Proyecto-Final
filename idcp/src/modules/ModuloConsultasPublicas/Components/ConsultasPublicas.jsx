@@ -1,7 +1,7 @@
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
 import Button from "@material-ui/core/Button";
-import { TextField } from "@material-ui/core";
+import { TextField, Typography } from "@material-ui/core";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import personEntity, {
   personSchema,
@@ -87,7 +87,7 @@ function ConsultaPublicas() {
                   size="large"
                   color="primary"
                 >
-                  Enviar
+                  <Typography class="text-lg p-1.5">Enviar</Typography>
                 </Button>
               </div>
             </div>
