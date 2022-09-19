@@ -2,10 +2,11 @@ import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
 import Button from "@material-ui/core/Button";
 import { TextField, Typography } from "@material-ui/core";
+import HomeIcon from "@material-ui/icons/Home";
 
 function Autorizacion() {
   return (
-    <Plantilla title="Autorización">
+    <Plantilla title="Autorización" icon={<HomeIcon fontSize="large" />}>
       <div class="flex flex-col mt-20 w-96">
         <div class="my-5">
           <TextField

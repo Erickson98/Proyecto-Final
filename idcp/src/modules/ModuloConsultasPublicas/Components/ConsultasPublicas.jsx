@@ -3,14 +3,18 @@ import "../../../s.css";
 import Button from "@material-ui/core/Button";
 import { TextField, Typography } from "@material-ui/core";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useNavigate } from "react-router-dom";
+import HomeIcon from "@material-ui/icons/Home";
+
 import personEntity, {
   personSchema,
   setTime
 } from "../../../EstadosUsuarios/EstadoConsultaPrivada";
 
 function ConsultaPublicas() {
+  const navigate = useNavigate();
   return (
-    <Plantilla title="Consultas Públicas">
+    <Plantilla title="Consultas Públicas" icon={<HomeIcon fontSize="large" />}>
       <Formik
         initialValues={{ ...personEntity }}
         validationSchema={personSchema}
@@ -86,6 +90,7 @@ function ConsultaPublicas() {
                   variant="contained"
                   size="large"
                   color="primary"
+                  onClick={() => navigate("/Autorizacion")}
                 >
                   <Typography class="text-lg p-1.5">Enviar</Typography>
                 </Button>

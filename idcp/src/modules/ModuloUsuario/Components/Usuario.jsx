@@ -9,7 +9,7 @@ function Usuario() {
         <TextField
           fullWidth
           id="outlined-basic"
-          label="No de Record"
+          label="Usuario"
           variant="outlined"
         />
       </div>
@@ -17,7 +17,7 @@ function Usuario() {
         <TextField
           fullWidth
           id="outlined-basic"
-          label="Total a Pagar"
+          label="Password"
           variant="outlined"
         />
       </div>

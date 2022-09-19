@@ -1,10 +1,14 @@
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
-import { TextField, TextareaAutosize, Typography } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 function EstadoDelPaciente() {
   return (
-    <Plantilla title="Estado del paciente">
+    <Plantilla
+      title="Estado del paciente"
+      icon={<ArrowForwardIcon fontSize="large" />}
+    >
       <div class="w-1/2 mt-20 my-5">
         <TextField
           fullWidth
