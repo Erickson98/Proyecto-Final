@@ -1,10 +1,21 @@
-// import Plantilla from "../../../assests/Plantilla.jpg";
 import Plantilla from "../../../helpers/Plantilla";
 import "../../../s.css";
+import {
+  GoogleLoginButton,
+  FacebookLoginButton
+} from "react-social-login-buttons";
 function Login() {
   return (
-    <Plantilla/>
-    
+    <Plantilla title="Iniciar sesión">
+      <div>
+        <GoogleLoginButton />
+      </div>
+
+      <p class="mt-5 mb-5">O</p>
+      <div>
+        <FacebookLoginButton />
+      </div>
+    </Plantilla>
   );
 }
 

@@ -1,16 +1,15 @@
-// import "./App.css";
-// import Vector from "./assests/Vector.jpg";
-// import "./s.css";
-// function App() {
-//   return (
-//     <div>
-//       <img src={Vector} class="max-w-full h-screen w-full bg-black" />
-//     </div>
-//   );
-// }
-
 import LoginPage from "./Pages/Login";
+import Consulta from "./modules/ModuleConsultas/Components/Consulta";
+import ConsultaPrivadasPage from "./Pages/ConsultasPrivadas";
+import ConsultaPublicaPage from "./Pages/ConsultasPublicas";
+import AutorizacionPage from "./Pages/Autorizacion";
+import MenuPrincipalPage from "./Pages/MenuPrincipal";
+import IndicacionesPage from "./Pages/Indicaciones";
+import EstadoDelPacientePage from "./Pages/EstadoDelPaciente";
+import SalaDeEsperaPage from "./Pages/SalaDeEspera";
+import FarmaciaPage from "./Pages/Farmacia";
+import MedicoGeneralPage from "./Pages/MedicoGeneral";
 function App() {
-  return <LoginPage />;
+  return <MedicoGeneralPage />;
 }
 export default App;
