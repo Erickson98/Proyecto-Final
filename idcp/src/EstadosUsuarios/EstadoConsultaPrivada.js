@@ -19,15 +19,15 @@ export const setTime = () => {
 };
 
 let personEntity = {
-  Name: "",
-  LastName: "",
-  Date: setTime(),
-  Address: ""
+  Nombre: "",
+  Apellido: "",
+  Fecha: setTime(),
+  Direccion: ""
 };
 
 export const personSchema = yup.object().shape({
-  Name: yup.string().required(FIRST_REQ),
-  LastName: yup.string().required(SECOND_REQ),
-  Address: yup.string().required(FIFTH_REQ)
+  Nombre: yup.string().required(FIRST_REQ),
+  Apellido: yup.string().required(SECOND_REQ),
+  Direccion: yup.string().required(FIFTH_REQ)
 });
 export default personEntity;

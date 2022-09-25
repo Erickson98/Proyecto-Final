@@ -10,8 +10,12 @@ import personEntity, {
   personSchema,
   setTime
 } from "../../../EstadosUsuarios/EstadoConsultaPrivada";
+import { eventSubmit } from "./event";
 
 function ConsultaPublicas() {
+  const s = (s) => {
+    console.log("hello");
+  };
   const navigate = useNavigate();
   return (
     <Plantilla title="Consultas Públicas" icon={<HomeIcon fontSize="large" />}>
@@ -19,7 +23,7 @@ function ConsultaPublicas() {
         initialValues={{ ...personEntity }}
         validationSchema={personSchema}
         onSubmit={(values, { resetForm }) => {
-          // eventSubmitAdd(values);
+          s(values);
           resetForm();
         }}
       >
@@ -29,14 +33,14 @@ function ConsultaPublicas() {
               fullWidth
               type="text"
               label="Nombre"
-              id="Name"
-              name="Name"
+              id="Nombre"
+              name="Nombre"
               variant="outlined"
               as={TextField}
             />
 
             <div className="errorMessage">
-              <ErrorMessage name="Name" />
+              <ErrorMessage name="Nombre" />
             </div>
             <div class="my-4">
               <Field
@@ -44,14 +48,14 @@ function ConsultaPublicas() {
                 className="formElements"
                 type="text"
                 label="Apellido"
-                id="LastName"
-                name="LastName"
+                id="Apellido"
+                name="Apellido"
                 variant="outlined"
                 as={TextField}
               />
             </div>
             <div className="errorMessage">
-              <ErrorMessage name="LastName" />
+              <ErrorMessage name="Apellido" />
             </div>
             <div class="my-4">
               <Field
@@ -59,14 +63,14 @@ function ConsultaPublicas() {
                 className="formElements"
                 type="text"
                 label="Dirección particular"
-                id="Address"
-                name="Address"
+                id="Direccion"
+                name="Direccion"
                 variant="outlined"
                 as={TextField}
               />
             </div>
             <div className="errorMessage">
-              <ErrorMessage name="Address" />
+              <ErrorMessage name="Direccion" />
             </div>
             <div class="my-4">
               <Field
@@ -81,7 +85,7 @@ function ConsultaPublicas() {
               />
             </div>
             <div className="errorMessage">
-              <ErrorMessage name="Address" />
+              <ErrorMessage name="Seguro" />
             </div>
             <div>
               <div className="btnSubmitContainer">
@@ -90,7 +94,7 @@ function ConsultaPublicas() {
                   variant="contained"
                   size="large"
                   color="primary"
-                  onClick={() => navigate("/Autorizacion")}
+                  // onClick={() => navigate("/Autorizacion")}
                 >
                   <Typography class="text-lg p-1.5">Enviar</Typography>
                 </Button>
