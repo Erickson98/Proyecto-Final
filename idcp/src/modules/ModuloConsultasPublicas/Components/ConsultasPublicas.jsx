@@ -7,23 +7,20 @@ import { useNavigate } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 
 import personEntity, {
-  personSchema,
-  setTime
-} from "../../../EstadosUsuarios/EstadoConsultaPrivada";
-import { eventSubmit } from "./event";
+  personSchema
+} from "../../../EstadosUsuarios/EstadoConsultaPublica";
+import { eventSubmit } from "../../../helpers/event.endpoint";
 
 function ConsultaPublicas() {
-  const s = (s) => {
-    console.log("hello");
-  };
   const navigate = useNavigate();
+  const module = "ConsultaPublica";
   return (
     <Plantilla title="Consultas Públicas" icon={<HomeIcon fontSize="large" />}>
       <Formik
         initialValues={{ ...personEntity }}
         validationSchema={personSchema}
-        onSubmit={(values, { resetForm }) => {
-          s(values);
+        onSubmit={async (values, { resetForm }) => {
+          eventSubmit(module, values, "publica");
           resetForm();
         }}
       >
@@ -90,11 +87,16 @@ function ConsultaPublicas() {
             <div>
               <div className="btnSubmitContainer">
                 <Button
+                  type="submit"
                   fullWidth
                   variant="contained"
                   size="large"
                   color="primary"
-                  // onClick={() => navigate("/Autorizacion")}
+                  onClick={() => {
+                    setTimeout(() => {
+                      navigate("/Autorizacion");
+                    }, 1000);
+                  }}
                 >
                   <Typography class="text-lg p-1.5">Enviar</Typography>
                 </Button>

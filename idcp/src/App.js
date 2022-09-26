@@ -13,6 +13,7 @@ import FarmaciaPage from "./Pages/Farmacia";
 import MedicoGeneralPage from "./Pages/MedicoGeneral";
 import UsuarioPage from "./Pages/Usuario";
 import IndicacionMedicoPage from "./Pages/IndicacionesMedico";
+import LoginEmpleadoPage from "./Pages/LoginEmpleado";
 function App() {
   return (
     <div>
@@ -31,6 +32,7 @@ function App() {
         <Route path="/MedicoGeneral" element={<MedicoGeneralPage />} />
         <Route path="/IndicacionesMedico" element={<IndicacionMedicoPage />} />
         <Route path="/Usuario" element={<UsuarioPage />} />
+        <Route path="/LoginEmpleadoPage" element={<UsuarioPage />} />
       </Routes>
     </div>
   );

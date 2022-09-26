@@ -4,23 +4,39 @@ import { EsquemaAtributos } from "../../../EstadosUsuarios/MedicoGeneralTablaEsq
 import { useState } from "react";
 
 import "../../../s.css";
+import { useEffect } from "react";
+import { getData } from "../../../helpers/getData";
+import { useNavigate } from "react-router-dom";
 
 function MedicoGeneral() {
+  const navigate = useNavigate();
   const { Columna } = EsquemaAtributos;
-  const [data, setData] = useState();
-  let s = [{ Nombre: "d", Estado: "d" }];
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function getElement() {
+      const element = await getData();
+      console.log([element.data[0]]);
+      setData([element.data[0]]);
+    }
+    getElement();
+  }, []);
+  const handleConsult = async (datos) => {
+    localStorage.setItem("datos", JSON.stringify(datos));
+    navigate("/IndicacionesMedico");
+  };
   return (
     <Plantilla title="Médico general">
       <div class="mt-16 w-1/2">
         <MaterialTable
           columns={Columna}
-          data={s}
+          data={data}
           title={""}
           actions={[
             {
               icon: "edit",
-              tooltip: "Editar elemento",
-              onClick: (event, rowData) => console.log("d")
+              tooltip: "Atender Paciente",
+              onClick: (event, rowData) => handleConsult(rowData)
             }
           ]}
           options={{ actionsColumnIndex: 3 }}

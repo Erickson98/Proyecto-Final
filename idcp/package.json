@@ -12,6 +12,7 @@
     "autoprefixer": "^10.4.11",
     "axios": "^0.27.2",
     "dotenv": "^16.0.2",
+    "dotenv-webpack": "^8.0.1",
     "formik": "^2.2.9",
     "material-table": "^1.69.3",
     "postcss": "^8.4.16",

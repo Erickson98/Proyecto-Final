@@ -5,8 +5,8 @@ export const EsquemaAtributos = {
       field: "Nombre"
     },
     {
-      title: "Estado",
-      field: "Estado"
+      title: "Apellido",
+      field: "Apellido"
     }
   ]
 };
